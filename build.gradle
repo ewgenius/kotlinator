@@ -6,6 +6,7 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:1.2.3'
         classpath 'org.robovm:robovm-gradle-plugin:1.9.0'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.0.0-beta-2423'
     }
 }
 
@@ -78,7 +79,9 @@ project(":ios") {
 
 project(":core") {
     apply plugin: "java"
+    apply plugin: "kotlin"
 
+    ext.kotlin_version = '1.0.0-beta-2423'
 
     dependencies {
         compile "com.badlogicgames.gdx:gdx:$gdxVersion"
